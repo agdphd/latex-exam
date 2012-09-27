@@ -1,0 +1,35 @@
+\ProvidesPackage{agd-exam}
+
+\usepackage[american]{babel}
+\usepackage[babel]{csquotes}
+
+\usepackage{hyperref}
+
+\usepackage[T1]{fontenc}
+\usepackage[urw-garamond]{mathdesign}
+
+\usepackage[margin=1.0in]{geometry}
+
+\SectionPrefix{}
+\ContinuousNumbering
+
+\newcommand*{\testinst}[1]{\gdef\@testinst{#1}}
+\newcommand*{\testcloseinst}[1]{\gdef\@testcloseinst{#1}}
+
+\begin{examtop}
+  \noindent Name: \hrulefill \\
+  \begin{center}
+    \Large\textbf{\classdata}:
+    \Large\textbf{\examtype}
+  \end{center}
+\end{examtop}
+
+\begin{exampreface}
+  \@testinst
+\end{exampreface}
+
+\begin{examclosing}
+  \@testcloseinst
+\end{examclosing}
+
+\NoKey
