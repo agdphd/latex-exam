@@ -22,6 +22,12 @@
 
 \usepackage[margin=1.0in,letterpaper]{geometry}
 
+\usepackage{fancyhdr}
+\fancypagestyle{lastpage}{
+  \fancyhf{}
+  \fancyfoot[L]{\@testcloseinst}
+}
+
 \newcommand*{\score}[1]{[\textit{{#1} pts}]}
 
 \SectionPrefix{}
@@ -43,7 +49,7 @@
 \end{exampreface}
 
 \begin{examclosing}
-  \@testcloseinst
+  \thispagestyle{lastpage}
 \end{examclosing}
 
 \NoKey
